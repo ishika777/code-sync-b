@@ -87,10 +87,10 @@ io.on("connection", (socket) => {
 app.use("/", runRouter)
 app.use("/", aiRouter)
 
-app.use(express.static(path.join(DIRNAME, "client/dist")))
-app.get("*", (_, res) => {
-    res.sendFile(path.join(DIRNAME, "client","dist", "index.html"))
-})
+// app.use(express.static(path.join(DIRNAME, "client/dist")))
+// app.get("*", (_, res) => {
+//     res.sendFile(path.join(DIRNAME, "client","dist", "index.html"))
+// })
 
 server.listen(port, () => {
     console.log(`server is listening on port ${port}`)
